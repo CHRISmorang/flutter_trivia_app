@@ -1,5 +1,8 @@
-\u2705 Integrated OpenTriviaDB API
-\u2705 Timer
-\u2705 Kill streak bonus timer
-\u2705 Shows score
-  much more...
+This project has the following features:
+
+- ✅ Integrated OpenTriviaDB API
+- ✅ Timer
+- ✅ Kill streak bonus timer
+- ✅ Shows score
+- ✅ etc
+
