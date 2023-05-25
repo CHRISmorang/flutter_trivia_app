@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/chrismorang/Desktop/Files/Projects/Quiz_APP_flutter/build/hexcolor/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/chrismorang/.gradle/caches/transforms-2/files-2.1/7b3279c1824e38b6296b88be141e41bd/core-1.6.0/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/chrismorang/Desktop/Files/Projects/Quiz_APP_flutter/build/hexcolor/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/chrismorang/.gradle/caches/transforms-2/files-2.1/7b3279c1824e38b6296b88be141e41bd/core-1.6.0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/chrismorang/Desktop/Files/Projects/Quiz_APP_flutter/build/hexcolor/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/chrismorang/.gradle/caches/transforms-2/files-2.1/7b3279c1824e38b6296b88be141e41bd/core-1.6.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/chrismorang/Desktop/Files/Projects/Quiz_APP_flutter/build/hexcolor/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/chrismorang/.gradle/caches/transforms-2/files-2.1/7b3279c1824e38b6296b88be141e41bd/core-1.6.0/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

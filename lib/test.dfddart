@@ -1,0 +1,56 @@
+List<Map<String, Object>> parseJsonResponseToString(String jsonResponse) {
+  final decoded = json.decode(jsonResponse);
+  final results = decoded['results'];
+
+  List<Map<String, Object>> parsedQuestions = [];
+  for (int i = 0; i < results.length && i < 9; i++) {
+    final question = results[i]['question'];
+    final correctAnswer = results[i]['correct_answer'];
+    final incorrectAnswers = List<String>.from(results[i]['incorrect_answers']);
+
+    final allAnswers = [correctAnswer, ...incorrectAnswers];
+    allAnswers.shuffle();
+
+    List<Map<String, Object>> answers = [];
+    for (int j = 0; j < allAnswers.length; j++) {
+      final answerText = allAnswers[j];
+      final score = (answerText == correctAnswer) ? 11.11 : 0.0;
+      answers.add({'text': answerText, 'score': score});
+    }
+
+    parsedQuestions.add({
+      'questionText': question,
+      'answers': answers,
+    });
+  }
+
+  return parsedQuestions;
+}
+
+Future<List<Map<String, Object>>> parseJsonResponse(int catIn) async {
+  final cat = num.parse(catIn.toStringAsFixed(2));
+  var apiUrl = Uri.parse(
+      'https://opentdb.com/api.php?amount=9&category=$cat&type=multiple');
+
+  try {
+    var response = await http.get(apiUrl);
+    if (response.statusCode == 200) {
+      String jsonString = response.body;
+      return parseJsonResponseToString(jsonString);
+    } else {
+      throw Exception('Failed to fetch trivia questions');
+    }
+  } catch (error) {
+    //print('Error fetching trivia data: $error');
+    throw Exception('Failed to fetch trivia questions');
+  }
+  //throw Exception('Failed to fetch trivia questions');
+}
+
+// void main() async {
+//   int catIn = 11;
+//   List<Map<String, dynamic>> parsedQuestions = await parseJsonResponse(catIn);
+//   //print(parsedQuestions);
+// }
+
+List<Map<String, Object>> parsedQuestions = List.empty();
