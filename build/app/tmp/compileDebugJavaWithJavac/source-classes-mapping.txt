@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-com/naomilago/flutter_quiz_app/BuildConfig.java
- com.naomilago.flutter_quiz_app.BuildConfig
